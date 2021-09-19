@@ -19,21 +19,22 @@ time = $('.time')
 //     },1000);
 // }
 
-test()
-
 function colorCoding() {
-    let i =  $("#taskInput");
+    var taskInput =  $(".taskInput");
 for (i = 0 ; i < time.length ; i++){
     var d = new Date();
     var n = d.getUTCHours() + 1;
     if (n < time.text()) {
+        console.log(taskInput)
         // If time.text() is after 6PM or before 9AM, apply night theme to 'body'
-        $("#taskInput").addClass("past").removeClass("present", 'future');
+        $(taskInput).addClass("past").removeClass("present", 'future');
     } else if (n = time.text()) {
         // Else use ‘day’ theme
-        $("#taskInput").addClass("present").removeClass("past" , "future");
+        console.log(taskInput)
+        $(taskInput).addClass("present").removeClass("past" , "future");
     } else if (n > time.text()){
-        $("#taskInput").addClass("future").removeClass("past" , "present");
+        $(taskInput).addClass("future").removeClass("past" , "present");
+        console.log(taskInput)
     }
 }
 }
