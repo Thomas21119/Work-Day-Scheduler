@@ -19,27 +19,31 @@ time = $('.time')
 //     },1000);
 // }
 
-function colorCoding() {
+function colorCoding(){
     var taskInput =  $(".taskInput");
-for (i = 0 ; i < time.length ; i++){
-    var d = new Date();
-    var n = d.getUTCHours() + 1;
-    if (n < time.text()) {
-        console.log(taskInput)
-        // If time.text() is after 6PM or before 9AM, apply night theme to 'body'
-        $(taskInput).addClass("past").removeClass("present", 'future');
-    } else if (n = time.text()) {
-        // Else use ‘day’ theme
-        console.log(taskInput)
-        $(taskInput).addClass("present").removeClass("past" , "future");
-    } else if (n > time.text()){
-        $(taskInput).addClass("future").removeClass("past" , "present");
-        console.log(taskInput)
+    taskInput.each(function() {
+    // for (i = 0 ; i < time.length ; i++){
+        var n = Number(moment().format('HH'))
+        if (n < Number(time.text())) {
+        console.log("if " + Number(time.text()))
+        $(this).addClass("past").removeClass("present", 'future');
+    } else if (n = Number(time.text())) {
+        console.log("if else" + this)
+        $(this).addClass("present").removeClass("past" , "future");
+    } else if (n > Number(time.text())){
+        $(this).addClass("future").removeClass("past" , "present");
+        console.log("else" + this)
     }
+})
 }
-}
+
 $(document).ready(function () {
     colorCoding();
 });
 
 console.log("time length" + time.length)
+
+var d = new Date();
+        var n = Number(moment().format('HH'))
+        console.log(n + "test" + typeof n)
+        console.log(Number(time.text()))
