@@ -1,12 +1,12 @@
 var $currentDate = moment().format("ddd MMM Do, YYYY");
 $("#currentDay").text($currentDate);
-var time = $('#time').text()
 
 
-console.log(Number(moment().format("HH")))
-
+const momentTime = moment().hours()
+console.log(momentTime)
 time = $('.time')
 
+console.log(time[0])
 // function test() {
 // setInterval(function() {
 //     if (Number(moment().format("HH"))<10) {
@@ -21,29 +21,23 @@ time = $('.time')
 
 function colorCoding(){
     var taskInput =  $(".taskInput");
-    taskInput.each(function() {
-    // for (i = 0 ; i < time.length ; i++){
-        var n = Number(moment().format('HH'))
-        if (n < Number(time.text())) {
-        console.log("if " + Number(time.text()))
+    for (i = 0 ; i < time.length ; i++){
+        if (momentTime < time[i]) {
+            console.log(momentTime)
+            console.log(time[i])
         $(this).addClass("past").removeClass("present", 'future');
-    } else if (n = Number(time.text())) {
-        console.log("if else" + this)
+    } else if (momentTime == time[i]) {
+        console.log(momentTime)
+        console.log(time[i])
         $(this).addClass("present").removeClass("past" , "future");
-    } else if (n > Number(time.text())){
+    } else {
         $(this).addClass("future").removeClass("past" , "present");
-        console.log("else" + this)
+        console.log(momentTime)
+        console.log(time[i])
     }
-})
+}
 }
 
 $(document).ready(function () {
     colorCoding();
 });
-
-console.log("time length" + time.length)
-
-var d = new Date();
-        var n = Number(moment().format('HH'))
-        console.log(n + "test" + typeof n)
-        console.log(Number(time.text()))
