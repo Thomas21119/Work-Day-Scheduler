@@ -105,7 +105,7 @@ textarea {
 }
 
 .past {
-  background-color: #d3d3d3;
+  background-color: rgb(162, 162, 162);
   color: white;
 }
 
@@ -131,4 +131,3 @@ textarea {
   font-size: 20px;
   transition: all 0.3s ease-in-out;
 }
-
