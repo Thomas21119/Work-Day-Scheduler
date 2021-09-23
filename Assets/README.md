@@ -71,7 +71,7 @@ This homework is graded based on the following criteria:
 
 <!-- * Repository follows best practices for file structure and naming conventions -->
 
-* Repository follows best practices for class/id naming conventions, indentation, quality comments, etc.
+<!-- * Repository follows best practices for class/id naming conventions, indentation, quality comments, etc. -->
 
 <!-- * Repository contains multiple descriptive commit messages -->
 
