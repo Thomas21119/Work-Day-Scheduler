@@ -1,10 +1,13 @@
+// when page is loaded run functions at bottom of page
 $(document).ready(function () {
+// date time 
 var $currentDate = moment().format("ddd MMM Do, YYYY");
 $("#currentDay").text($currentDate);
 
+// sets a constant variable of the hour
 const momentTime = moment().hours()
-// const momentTime = 15
 
+// color codes based on time
 function colorCoding(){
     var taskInput =  $(".taskInput");
         taskInput.each(function(){
@@ -20,6 +23,7 @@ function colorCoding(){
 })
 }
 
+// on click of saveall button save everything inputed to local storage
 var saveAllBtn = $('.saveAllBtn')
 saveAllBtn.on('click', saveAll)
 
@@ -31,6 +35,7 @@ function saveAll () {
     })
 }
 
+// on click of clear all button everything is cleared from local storage and all inputs are cleared from current page
 var clearAllBtn = $('.clearAllBtn')
 clearAllBtn.on('click', clearAll)
 
@@ -43,6 +48,7 @@ function clearAll () {
     })
 }
 
+// save each input individually
 var btnClick = $('.saveBtn')
 btnClick.on("click", save);
 
@@ -54,7 +60,7 @@ function save() {
 }
 
 
-
+// loads all previously saved inputs into page 
 function loadPage() {
     var input = $('.taskInput')
     input.each(function() {
@@ -63,7 +69,7 @@ function loadPage() {
         $(this).val(localStorage.getItem(time));
     })
 }
-
+    // when page loads run these functions
     colorCoding();
     loadPage();
 });

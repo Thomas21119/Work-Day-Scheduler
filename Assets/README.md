@@ -43,7 +43,7 @@ This homework is graded based on the following criteria:
 
 ### Technical Acceptance Criteria: 40%
 
-* Satisfies all of the above acceptance criteria plus the following:
+<!-- * Satisfies all of the above acceptance criteria plus the following: -->
 
   <!-- * Uses a date utility library to work with date and time -->
 
@@ -61,7 +61,7 @@ This homework is graded based on the following criteria:
 
 <!-- * Application user experience is intuitive and easy to navigate -->
 
-* Application user interface style is clean and polished
+<!-- * Application user interface style is clean and polished -->
 
 <!-- * Application resembles the mock-up functionality provided in the homework instructions -->
 
@@ -69,7 +69,7 @@ This homework is graded based on the following criteria:
 
 <!-- * Repository has a unique name -->
 
-* Repository follows best practices for file structure and naming conventions
+<!-- * Repository follows best practices for file structure and naming conventions -->
 
 * Repository follows best practices for class/id naming conventions, indentation, quality comments, etc.
 
