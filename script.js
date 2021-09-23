@@ -1,3 +1,4 @@
+$(document).ready(function () {
 var $currentDate = moment().format("ddd MMM Do, YYYY");
 $("#currentDay").text($currentDate);
 
@@ -19,26 +20,50 @@ function colorCoding(){
 })
 }
 
+var saveAllBtn = $('.saveAllBtn')
+saveAllBtn.on('click', saveAll)
+
+function saveAll () {
+    var input = $('.taskInput')
+    input.each(function() {
+        input9 = $(this).data('hour');
+        localStorage.setItem(input9, this.value);
+    })
+}
+
+var clearAllBtn = $('.clearAllBtn')
+clearAllBtn.on('click', clearAll)
+
+function clearAll () {
+    var input = $('.taskInput')
+    input.each(function() {
+        time = $(this).data('hour');
+        localStorage.setItem(time, '');
+        $(this).val('')
+    })
+}
+
 var btnClick = $('.saveBtn')
 btnClick.on("click", save);
 
 function save() {
-    var input = $('.taskInput')
-    input.each(function() {
-        input9 = $(this).data('hour')
-        localStorage.setItem('input hour' + input9, this.value)
-    })
+    var input = $(this).parent().siblings('.task').children('.taskInput').val();
+    console.log(input)
+    var time = $(this).data('btn');
+    localStorage.setItem(time, input) 
 }
+
+
 
 function loadPage() {
     var input = $('.taskInput')
     input.each(function() {
-        input9 = $(this).data('hour')
-        this.value = localStorage.getItem('input hour' + input9)
+        var time = $(this).data('hour');
+        
+        $(this).val(localStorage.getItem(time));
     })
 }
 
-$(document).ready(function () {
     colorCoding();
     loadPage();
 });

@@ -45,35 +45,35 @@ This homework is graded based on the following criteria:
 
 * Satisfies all of the above acceptance criteria plus the following:
 
-  * Uses a date utility library to work with date and time
+  <!-- * Uses a date utility library to work with date and time -->
 
 ### Deployment: 32%
 
-* Application deployed at live URL
+<!-- * Application deployed at live URL -->
 
-* Application loads with no errors
+<!-- * Application loads with no errors -->
 
 * Application GitHub URL submitted
 
-* GitHub repo contains application code
+<!-- * GitHub repo contains application code -->
 
 ### Application Quality: 15%
 
-* Application user experience is intuitive and easy to navigate
+<!-- * Application user experience is intuitive and easy to navigate -->
 
 * Application user interface style is clean and polished
 
-* Application resembles the mock-up functionality provided in the homework instructions
+<!-- * Application resembles the mock-up functionality provided in the homework instructions -->
 
 ### Repository Quality: 13%
 
-* Repository has a unique name
+<!-- * Repository has a unique name -->
 
 * Repository follows best practices for file structure and naming conventions
 
 * Repository follows best practices for class/id naming conventions, indentation, quality comments, etc.
 
-* Repository contains multiple descriptive commit messages
+<!-- * Repository contains multiple descriptive commit messages -->
 
 * Repository contains quality README file with description, screenshot, and link to deployed application
 

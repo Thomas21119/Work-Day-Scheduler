@@ -4,7 +4,34 @@ html, body {
 
 header {
   height: 25%;
-  margin: 0;
+  width: 85%;
+  margin: 0%;
+  float: left;
+
+}
+
+.display-3 {
+  font-size: auto;
+  font-weight: 600;
+  font-family: sans-serif;
+}
+
+.allBtn {
+  width: 15%;
+  display: flex;
+  float: right;
+  border-bottom: 10px solid black;
+  height: 25%;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.allBtn button {
+  height: 20%;
+  width: 50%;
+  background-color: #06aed5;
+  margin: 2% auto;
+  border-radius: 20px;
 }
 
 main {
@@ -130,4 +157,12 @@ textarea {
 .saveBtn i:hover {
   font-size: 20px;
   transition: all 0.3s ease-in-out;
+}
+
+
+@media screen and (max-width: 900px) {
+  .display-3 {
+    font-size: 40px;
+    font-weight: 900;
+  }
 }
